@@ -67,13 +67,5 @@
                 VerticalAlignment="Center"
                 Click="CancelButton_Click"/>
 
-        <Button x:Name="DeleteButton"
-                Grid.Row="1"
-                Margin="20 0"
-                Content="Удалить"
-                HorizontalAlignment="Center"
-                VerticalAlignment="Center"
-                Click="DeleteButton_Click"/>
-
     </Grid>
 </Window>

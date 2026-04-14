@@ -135,7 +135,7 @@ namespace DemoExample
 
             // Фильтр
             //Забиарем выбранный объект в переменную 
-            var filter = (FilteringComboBox.SelectedItem as string).ToLower();
+            var filter = (FilteringComboBox.SelectedItem as string)?.Trim().ToLower();
 
             // Проверяем, что не пусто и не равно ВСЕ ПОСТАВЩИКИ
             // Ищем все продукты, у которых такой же поставщик (Provider)
