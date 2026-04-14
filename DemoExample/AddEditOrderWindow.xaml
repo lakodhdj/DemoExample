@@ -1,0 +1,54 @@
+﻿<Window x:Class="DemoExample.AddEditOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoExample"
+        mc:Ignorable="d"
+        Title="Добавление/Редактирование заказов" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer>
+            <StackPanel Margin="20">
+                <TextBlock Text="Дата Заказа"/>
+                <TextBox x:Name="OrderOrderDate" MaxLength="30"/>
+
+                <TextBlock Text="Дата Доставки"/>
+                <TextBox x:Name="OrderDeliveryDate" MaxLength="30"/>
+
+                <TextBlock Text="Статус"/>
+                <ComboBox x:Name="OrderStatusOrder"/>
+
+                <TextBlock Text="Айди клиента"/>
+                <TextBox x:Name="OrderCustomerID"/>
+
+                <TextBlock Text="Пункт доставки"/>
+                <ComboBox x:Name="OrderPickUpPoint"/>
+
+                <TextBlock Text="Код"/>
+                <TextBox Name="ProductCode"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <Button x:Name="SaveButton"
+            Grid.Row="1"
+            Margin="20 0"
+            Content="Сохранить"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            Click="SaveButton_Click"/>
+
+        <Button x:Name="CancelButton"
+            Grid.Row="1"
+            Margin="20 0"
+            Content="Отменить"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Click="CancelButton_Click"/>
+    </Grid>
+</Window>
